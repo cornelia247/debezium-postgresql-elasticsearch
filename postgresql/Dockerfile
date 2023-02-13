@@ -1,4 +1,4 @@
-FROM debezium/postgres:14-alpine
+FROM debezium/postgres:15-alpine
 
 COPY ./setup.sql /home/setup.sql
 COPY ./seed.sql /home/seed.sql

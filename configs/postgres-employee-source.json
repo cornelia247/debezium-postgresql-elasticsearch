@@ -25,11 +25,11 @@
     "key.converter.schemas.enable": "false",
     "value.converter.schemas.enable": "false",
 
-    "transforms":"Reroute",
+    "transforms": "Reroute",
     "transforms.Reroute.type": "io.debezium.transforms.ByLogicalTableRouter",
     "transforms.Reroute.topic.regex":"(.*)employee",
     "transforms.Reroute.topic.replacement": "cdc.employee_db.public.employee",
     "transforms.Reroute.key.field.name": "id",
-    "transforms.Reroute.key.enforce.uniqueness":"false"
+    "transforms.Reroute.key.enforce.uniqueness": "false"
   }
 }

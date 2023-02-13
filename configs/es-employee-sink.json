@@ -5,17 +5,13 @@
     "tasks.max": "1",
     "topics": "cdc.employee_db.public.employee",
     "connection.url": "http://elasticsearch:9200",
-
     "type.name": "_doc",
     "key.converter": "io.confluent.connect.avro.AvroConverter",
     "value.converter": "io.confluent.connect.avro.AvroConverter",
     "key.converter.schema.registry.url": "http://schema-registry:8081",
     "value.converter.schema.registry.url": "http://schema-registry:8081",
     "value.converter.schemas.enable": "false",
-    "schema.ignore": "true",
     "key.ignore": "false",
-    "behavior.on.null.values": "delete",    
-
     "transforms": "unwrap,key",
     "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
     "transforms.key.type": "org.apache.kafka.connect.transforms.ExtractField$Key",
@@ -24,3 +20,4 @@
     "transforms.unwrap.drop.deletes": "false"
   }
 }
+
